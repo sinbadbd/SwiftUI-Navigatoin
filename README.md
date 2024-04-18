@@ -51,3 +51,73 @@ struct SwiftUI_NavigationApp: App {
 }
 
 ```
+
+### Add Nivigation views
+``` swift
+struct AuthPage: View {
+    @EnvironmentObject private var coordinator: AppCoordinator
+    var body: some View {
+        VStack{
+            Text("Authentication Page")
+            
+            Button("Go to Home") {
+                coordinator.goToHomePage()
+            }
+        }
+    }
+}
+```
+```swift
+struct HomePageView: View {
+    
+    @EnvironmentObject private var coordinator: AppCoordinator
+
+    var body: some View {
+    
+        VStack{
+            Text("Home Page")
+            
+            Button("Go to Connection page") {
+                coordinator.gotoConnectionPage()
+            }
+        }
+    }
+}
+``` 
+
+```swift
+struct ConnectReportPage: View {
+    @EnvironmentObject private var coordinator: AppCoordinator
+    var body: some View {
+        VStack{
+            Text("Connecttion Page")
+            
+            Button("Go to setting page") {
+                coordinator.navigateAsRoot(.settings)
+                coordinator.dismissSheet()
+            }
+        }
+    }
+}
+```
+```swift
+struct settingsPage: View {
+    
+    @EnvironmentObject private var coordinator: AppCoordinator
+    
+    var body: some View {
+        VStack{
+            Text("Settings Page")
+            
+            Button("back to home page") {
+                coordinator.goToHomePage()
+            }
+            Button("deeplink to home page") {
+                coordinator.handleInAppDeepLink(route: .auth)
+            }
+        }
+    }
+}
+```
+
+
