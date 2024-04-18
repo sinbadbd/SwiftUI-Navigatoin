@@ -19,3 +19,35 @@ An enumeration that maps URL components to app-specific navigation routes.
 
 Responsible for maintaining a navigation path and optionally managing modal presentations.
 Provides methods like navigateTo, replaceLastWith, popTo, and presentSheet to control navigation flow programmatically.
+
+``` swift 
+import SwiftUI
+
+@main
+struct SwiftUI_NavigationApp: App {
+    
+    @ObservedObject var coordinator = AppCoordinator()
+    
+    var body: some Scene {
+        WindowGroup {
+            NavigationStack(path:  $coordinator.path) {
+                ContentView()
+                    .navigationDestination(for: DestinationFlowPage.self) { destination in
+                        NavigateViewFactory.viewForDestination(destination)
+                    }
+                    .sheet(item: $coordinator.sheetPage) { page in
+                        NavigateViewFactory.viewForDestination(page)
+                    }
+            }
+            .environmentObject(coordinator)
+            .onAppear {
+                print("destination: \(coordinator.path)")
+            }
+            .onOpenURL { url in
+                coordinator.handleDeepLink(url: url)
+            }
+        }
+    }
+}
+
+```
