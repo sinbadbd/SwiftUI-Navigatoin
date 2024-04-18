@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D6F3CAF2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F3CAE2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift */; };
+		1D6F3CB12BD15CA700BE6EE3 /* DeepLinkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F3CB02BD15CA700BE6EE3 /* DeepLinkRoute.swift */; };
 		1DB97C382BCFA6A30031A0F5 /* SwiftUI_NavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C372BCFA6A30031A0F5 /* SwiftUI_NavigationApp.swift */; };
 		1DB97C3A2BCFA6A30031A0F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C392BCFA6A30031A0F5 /* ContentView.swift */; };
 		1DB97C3C2BCFA6A60031A0F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DB97C3B2BCFA6A60031A0F5 /* Assets.xcassets */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D6F3CAD2BD1562600BE6EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1D6F3CAE2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeepLink+AppCoordinator.swift"; sourceTree = "<group>"; };
+		1D6F3CB02BD15CA700BE6EE3 /* DeepLinkRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkRoute.swift; sourceTree = "<group>"; };
 		1DB97C342BCFA6A30031A0F5 /* SwiftUI-Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB97C372BCFA6A30031A0F5 /* SwiftUI_NavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_NavigationApp.swift; sourceTree = "<group>"; };
 		1DB97C392BCFA6A30031A0F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,9 +77,10 @@
 		1DB97C362BCFA6A30031A0F5 /* SwiftUI-Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				1D6F3CAD2BD1562600BE6EE3 /* Info.plist */,
+				1DB97C482BCFA6D60031A0F5 /* AppCoordinator */,
 				1DB97C542BCFA7990031A0F5 /* App */,
 				1DB97C4D2BCFA7730031A0F5 /* Views */,
-				1DB97C482BCFA6D60031A0F5 /* AppCoordinator */,
 				1DB97C552BCFA7C00031A0F5 /* Utils */,
 				1DB97C3B2BCFA6A60031A0F5 /* Assets.xcassets */,
 				1DB97C3D2BCFA6A60031A0F5 /* SwiftUI_Navigation.entitlements */,
@@ -97,6 +103,7 @@
 				1DB97C462BCFA6D20031A0F5 /* AppCoordinator.swift */,
 				1DB97C492BCFA6FA0031A0F5 /* DestinationFlowPage.swift */,
 				1DB97C4B2BCFA73E0031A0F5 /* NavigateViewFactory.swift */,
+				1D6F3CAE2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift */,
 				1DB97C582BCFA8970031A0F5 /* Router */,
 			);
 			path = AppCoordinator;
@@ -133,6 +140,7 @@
 		1DB97C582BCFA8970031A0F5 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				1D6F3CB02BD15CA700BE6EE3 /* DeepLinkRoute.swift */,
 				1DB97C592BCFA8B10031A0F5 /* Auth+Router.swift */,
 				1DB97C5B2BCFA8C50031A0F5 /* Home+Router.swift */,
 			);
@@ -212,7 +220,9 @@
 				1DB97C4F2BCFA77B0031A0F5 /* AuthPage.swift in Sources */,
 				1DB97C472BCFA6D20031A0F5 /* AppCoordinator.swift in Sources */,
 				1DB97C3A2BCFA6A30031A0F5 /* ContentView.swift in Sources */,
+				1D6F3CAF2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift in Sources */,
 				1DB97C5E2BCFAA870031A0F5 /* settingsPage.swift in Sources */,
+				1D6F3CB12BD15CA700BE6EE3 /* DeepLinkRoute.swift in Sources */,
 				1DB97C4C2BCFA73E0031A0F5 /* NavigateViewFactory.swift in Sources */,
 				1DB97C5C2BCFA8C50031A0F5 /* Home+Router.swift in Sources */,
 				1DB97C572BCFA7CA0031A0F5 /* Logger.swift in Sources */,
@@ -354,6 +364,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Navigation/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -392,6 +403,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Navigation/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

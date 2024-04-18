@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct settingsPage: View {
+    
     @EnvironmentObject private var coordinator: AppCoordinator
+    
     var body: some View {
         VStack{
             Text("Settings Page")
             
             Button("back to home page") {
                 coordinator.goToHomePage()
+            }
+            Button("deeplink to home page") {
+                coordinator.handleInAppDeepLink(route: .auth)
             }
         }
     }
