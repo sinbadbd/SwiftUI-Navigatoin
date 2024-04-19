@@ -19,3 +19,105 @@ An enumeration that maps URL components to app-specific navigation routes.
 
 Responsible for maintaining a navigation path and optionally managing modal presentations.
 Provides methods like navigateTo, replaceLastWith, popTo, and presentSheet to control navigation flow programmatically.
+
+``` swift 
+import SwiftUI
+
+@main
+struct SwiftUI_NavigationApp: App {
+    
+    @ObservedObject var coordinator = AppCoordinator()
+    
+    var body: some Scene {
+        WindowGroup {
+            NavigationStack(path:  $coordinator.path) {
+                ContentView()
+                    .navigationDestination(for: DestinationFlowPage.self) { destination in
+                        NavigateViewFactory.viewForDestination(destination)
+                    }
+                    .sheet(item: $coordinator.sheetPage) { page in
+                        NavigateViewFactory.viewForDestination(page)
+                    }
+            }
+            .environmentObject(coordinator)
+            .onAppear {
+                print("destination: \(coordinator.path)")
+            }
+            .onOpenURL { url in
+                coordinator.handleDeepLink(url: url)
+            }
+        }
+    }
+}
+
+```
+
+### Add Nivigation views
+``` swift
+struct AuthPage: View {
+    @EnvironmentObject private var coordinator: AppCoordinator
+    var body: some View {
+        VStack{
+            Text("Authentication Page")
+            
+            Button("Go to Home") {
+                coordinator.goToHomePage()
+            }
+        }
+    }
+}
+```
+```swift
+struct HomePageView: View {
+    
+    @EnvironmentObject private var coordinator: AppCoordinator
+
+    var body: some View {
+    
+        VStack{
+            Text("Home Page")
+            
+            Button("Go to Connection page") {
+                coordinator.gotoConnectionPage()
+            }
+        }
+    }
+}
+``` 
+
+```swift
+struct ConnectReportPage: View {
+    @EnvironmentObject private var coordinator: AppCoordinator
+    var body: some View {
+        VStack{
+            Text("Connecttion Page")
+            
+            Button("Go to setting page") {
+                coordinator.navigateAsRoot(.settings)
+                coordinator.dismissSheet()
+            }
+        }
+    }
+}
+```
+```swift
+struct settingsPage: View {
+    
+    @EnvironmentObject private var coordinator: AppCoordinator
+    
+    var body: some View {
+        VStack{
+            Text("Settings Page")
+            
+            Button("back to home page") {
+                coordinator.goToHomePage()
+            }
+            Button("deeplink to home page") {
+                coordinator.handleInAppDeepLink(route: .auth)
+            }
+        }
+    }
+}
+```
+
+
