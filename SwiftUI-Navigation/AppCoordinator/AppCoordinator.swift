@@ -72,6 +72,16 @@ class AppCoordinator: ObservableObject {
         }
         printStack("After Pop To")
     }
+    func popToPrevious(completion: @escaping () -> Void) {
+        Logger.shared.log("Request to pop to previous", level: .info)
+        printStack("Before Pop to Previous")
+        if !stack.isEmpty {
+            stack.removeLast()
+            updateNavigationPath()
+        }
+        printStack("After Pop to Previous")
+        completion()  // Call the completion handler
+    }
     
     func navigateAsRoot(_ page: DestinationFlowPage) {
         Logger.shared.log("Request to navigate as root to \(page)", level: .info)

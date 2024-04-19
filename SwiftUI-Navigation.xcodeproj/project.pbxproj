@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D580C992BD2DEB60051D9C7 /* CustomBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D580C982BD2DEB60051D9C7 /* CustomBackView.swift */; };
 		1D6F3CAF2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F3CAE2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift */; };
 		1D6F3CB12BD15CA700BE6EE3 /* DeepLinkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F3CB02BD15CA700BE6EE3 /* DeepLinkRoute.swift */; };
 		1DB97C382BCFA6A30031A0F5 /* SwiftUI_NavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C372BCFA6A30031A0F5 /* SwiftUI_NavigationApp.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D580C982BD2DEB60051D9C7 /* CustomBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackView.swift; sourceTree = "<group>"; };
 		1D6F3CAD2BD1562600BE6EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1D6F3CAE2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeepLink+AppCoordinator.swift"; sourceTree = "<group>"; };
 		1D6F3CB02BD15CA700BE6EE3 /* DeepLinkRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkRoute.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				1DB97C502BCFA7830031A0F5 /* HomePageView.swift */,
 				1DB97C522BCFA7900031A0F5 /* ConnectReportPage.swift */,
 				1DB97C5D2BCFAA870031A0F5 /* settingsPage.swift */,
+				1D580C982BD2DEB60051D9C7 /* CustomBackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				1DB97C3A2BCFA6A30031A0F5 /* ContentView.swift in Sources */,
 				1D6F3CAF2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift in Sources */,
 				1DB97C5E2BCFAA870031A0F5 /* settingsPage.swift in Sources */,
+				1D580C992BD2DEB60051D9C7 /* CustomBackView.swift in Sources */,
 				1D6F3CB12BD15CA700BE6EE3 /* DeepLinkRoute.swift in Sources */,
 				1DB97C4C2BCFA73E0031A0F5 /* NavigateViewFactory.swift in Sources */,
 				1DB97C5C2BCFA8C50031A0F5 /* Home+Router.swift in Sources */,

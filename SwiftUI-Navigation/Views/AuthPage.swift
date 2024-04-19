@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AuthPage: View {
-//    @ObservedObject var viewModel: AuthViewModel
     @EnvironmentObject private var coordinator: AppCoordinator
     var body: some View {
         VStack{
