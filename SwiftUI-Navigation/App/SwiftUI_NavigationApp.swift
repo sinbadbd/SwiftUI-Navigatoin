@@ -25,7 +25,7 @@ struct SwiftUI_NavigationApp: App {
             }
             .environmentObject(coordinator)
             .onAppear {
-                print("destination: \(coordinator.path)")
+                //print("destination: \(coordinator.path)")
             }
             .onOpenURL { url in
                 coordinator.handleDeepLink(url: url)
