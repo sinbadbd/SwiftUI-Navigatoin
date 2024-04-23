@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct AboutPageView: View {
+    let edges = UIWindow.keyWindow?.safeAreaInsets
     @EnvironmentObject private var coordinator: AppCoordinator
-    
     var body: some View {
-        
         VStack{
-            CustomBackView(coordinator: _coordinator)
-            ScrollView {
-                Text("About Page")
-                
-                Button("Go to some page") {
-                    coordinator.gotoConnectionPage()
-                }
+            CustomBackView(coordinator: _coordinator,title: "AboutPageView Page")
+            
+            Text("AboutPageView Page")
+            
+            Button("GO to ") {
+                coordinator.navigateAsRoot(.settingsPnP)
             }
+            .buttonBorderShape(.capsule)
         }
+        .padding(.top, edges?.top)
         .ignoresSafeArea()
         .navigationBarBackButtonHidden()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)

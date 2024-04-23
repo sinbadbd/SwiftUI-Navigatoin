@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct DetailScreenView: View {
+    let edges = UIWindow.keyWindow?.safeAreaInsets
+    @EnvironmentObject private var coordinator: AppCoordinator
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            CustomBackView(coordinator: _coordinator,title: "Detail Page")
+            
+            Text("Detail Page")
+            
+            Button("Go Payment") {
+                coordinator.gotoPaymentPage()
+            }
+            .buttonBorderShape(.capsule)
+        }
+        .padding(.top, edges?.top)
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 }
 

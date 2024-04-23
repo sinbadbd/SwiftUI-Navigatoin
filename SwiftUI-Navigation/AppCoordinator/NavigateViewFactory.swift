@@ -36,7 +36,7 @@ class NavigateViewFactory{
         case .settingsTnC: goSettingTncView()
         case .settingsPnP: goSettingPnCView()
         case .profile: goProfilePageView()
-        case .profileDetail(user: let user): EmptyView()
+        case .profileDetail(user: let user): goProfileDetailView()
         case .homeDetail: EmptyView()
         case .generalDetail(text: let text):   EmptyView()
         case .about: AboutPageView()
@@ -53,24 +53,10 @@ class NavigateViewFactory{
         let view = HomePageView()//PlatformPage()//HomeView(viewModel: HomeVM.init())
         return view
     }
-    
-    static func getDetailsPage() -> some View{
-        let view = DetailScreenView()//DetailScreenView()
-        return view
-    }
-    static func goAddToCard() -> some View{
-        let view = AddToCartView()//AddToCartView()
-        return view
-    }
-    
-    static func goPaymentView() -> some View{
-        let view = PaymentView()//PaymentView()
-        return view
-    }
     static func goConnectionViewView() -> some View{
         let view = ConnectReportPage()//PaymentView()
         return view
-    }
+    } 
     static func goSettingPageView() -> some View{
         let view = settingsPage()
         return view
@@ -78,6 +64,25 @@ class NavigateViewFactory{
     
     static func goProfilePageView() -> some View{
         let view = ProfileView()
+        return view
+    }
+    static func goAddToCard() -> some View{
+        let view = AddToCartView()//AddToCartView()
+        return view
+    }
+    
+    static func getDetailsPage() -> some View{
+        let view = DetailScreenView()//DetailScreenView()
+        return view
+    }
+  
+    static func goPaymentView() -> some View{
+        let view = PaymentView()//PaymentView()
+        return view
+    }
+
+    static func goProfileDetailView() -> some View{
+        let view = ProfileDetailView()
         return view
     }
     

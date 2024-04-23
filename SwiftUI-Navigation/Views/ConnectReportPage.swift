@@ -14,7 +14,7 @@ struct ConnectReportPage: View {
     
     var body: some View {
         VStack{
-            CustomBackView(coordinator: _coordinator)
+            CustomBackView(coordinator: _coordinator, title: "Connecttion Page")
             
             Text("Connecttion Page")
             

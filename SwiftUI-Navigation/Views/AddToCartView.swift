@@ -12,12 +12,12 @@ struct AddToCartView: View {
     @EnvironmentObject private var coordinator: AppCoordinator
     var body: some View {
         VStack{
-            CustomBackView(coordinator: _coordinator)
+            CustomBackView(coordinator: _coordinator,title: "Add to cart Page")
             
             Text("Add to cart Page")
             
-            Button("Go to setting page") {
-                coordinator.navigateAsRoot(.connectionStatus)
+            Button("Go to Detail page") {
+                coordinator.gotoDetailPage()
             }
         }
         .padding(.top, edges?.top)

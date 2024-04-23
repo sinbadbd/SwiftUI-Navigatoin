@@ -12,7 +12,7 @@ struct ProfileView: View {
     @EnvironmentObject private var coordinator: AppCoordinator
     var body: some View {
         VStack{
-            CustomBackView(coordinator: _coordinator)
+            CustomBackView(coordinator: _coordinator,title: "Profile Page")
             
             Text("Profile Page")
             

@@ -12,8 +12,11 @@ import SwiftUI
 struct CustomBackView: View {
     @EnvironmentObject var coordinator: AppCoordinator
     //let edges = UIWindow.keyWindow?.safeAreaInsets
+    
+    var title: String?
+    
     var body: some View {
-        VStack(alignment: .leading) {
+        HStack {
             Button(action: {
                 // Call popToPrevious with a completion handler
                 coordinator.popToPrevious {
@@ -25,9 +28,20 @@ struct CustomBackView: View {
                 HStack {
                     Image(systemName: "arrow.left")
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(width: 24 , height: 24)
+//                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .foregroundColor(.black)
+            
+            Spacer()
+            if let title = title{
+                Text(title)
+                    .font(.title3)
+                    .foregroundColor(.black)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+            Spacer()
+                .frame(width: 40)
         }
         //.padding(.top, edges?.top)
         .padding(.horizontal, 16)

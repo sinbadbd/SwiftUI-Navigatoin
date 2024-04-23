@@ -106,6 +106,7 @@
 		1DB97C362BCFA6A30031A0F5 /* SwiftUI-Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				1D13FBCB2BD7AD2300D3DF3F /* Documentation.docc */,
 				1D6F3CAD2BD1562600BE6EE3 /* Info.plist */,
 				1DB97C482BCFA6D60031A0F5 /* AppCoordinator */,
 				1DB97C542BCFA7990031A0F5 /* App */,
@@ -129,11 +130,10 @@
 		1DB97C482BCFA6D60031A0F5 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				1D13FBCB2BD7AD2300D3DF3F /* Documentation.docc */,
-				1DB97C562BCFA7CA0031A0F5 /* Logger.swift */,
 				1DB97C462BCFA6D20031A0F5 /* AppCoordinator.swift */,
 				1DB97C492BCFA6FA0031A0F5 /* DestinationFlowPage.swift */,
 				1DB97C4B2BCFA73E0031A0F5 /* NavigateViewFactory.swift */,
+				1DB97C562BCFA7CA0031A0F5 /* Logger.swift */,
 				1DB97C582BCFA8970031A0F5 /* Router */,
 				1D13FBBA2BD7835600D3DF3F /* DeepLink */,
 			);

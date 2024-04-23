@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct SettingsPnCView: View {
+    let edges = UIWindow.keyWindow?.safeAreaInsets
+    @EnvironmentObject private var coordinator: AppCoordinator
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            CustomBackView(coordinator: _coordinator,title: "SettingsPnCView Page")
+            
+            Text("SettingsPnCView Page")
+            
+            Button("GO to ") {
+                //coordinator.navigateAsRoot(.connectionStatus)
+            }
+            .buttonBorderShape(.capsule)
+        }
+        .padding(.top, edges?.top)
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 }
 

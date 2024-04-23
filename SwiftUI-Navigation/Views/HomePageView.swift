@@ -15,7 +15,7 @@ struct HomePageView: View {
     var body: some View {
     
         VStack{
-            CustomBackView(coordinator: _coordinator)
+            CustomBackView(coordinator: _coordinator, title: "Home Page")
             ScrollView {
                 Text("Home Page")
                 
