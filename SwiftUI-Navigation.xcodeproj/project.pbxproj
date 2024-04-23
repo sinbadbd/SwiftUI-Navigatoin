@@ -15,6 +15,7 @@
 		1D13FBC62BD795FD00D3DF3F /* SettingsTnCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FBC52BD795FD00D3DF3F /* SettingsTnCView.swift */; };
 		1D13FBC82BD7962500D3DF3F /* SettingsPnCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FBC72BD7962500D3DF3F /* SettingsPnCView.swift */; };
 		1D13FBCA2BD7991000D3DF3F /* AboutPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FBC92BD7991000D3DF3F /* AboutPageView.swift */; };
+		1D13FBCC2BD7AD2400D3DF3F /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FBCB2BD7AD2300D3DF3F /* Documentation.docc */; };
 		1D580C992BD2DEB60051D9C7 /* CustomBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D580C982BD2DEB60051D9C7 /* CustomBackView.swift */; };
 		1D6F3CAF2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F3CAE2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift */; };
 		1D6F3CB12BD15CA700BE6EE3 /* DeepLinkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F3CB02BD15CA700BE6EE3 /* DeepLinkRoute.swift */; };
@@ -43,6 +44,7 @@
 		1D13FBC52BD795FD00D3DF3F /* SettingsTnCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTnCView.swift; sourceTree = "<group>"; };
 		1D13FBC72BD7962500D3DF3F /* SettingsPnCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPnCView.swift; sourceTree = "<group>"; };
 		1D13FBC92BD7991000D3DF3F /* AboutPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageView.swift; sourceTree = "<group>"; };
+		1D13FBCB2BD7AD2300D3DF3F /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; name = Documentation.docc; path = "SwiftUI-Navigation/Documentation.docc"; sourceTree = SOURCE_ROOT; };
 		1D580C982BD2DEB60051D9C7 /* CustomBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackView.swift; sourceTree = "<group>"; };
 		1D6F3CAD2BD1562600BE6EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1D6F3CAE2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeepLink+AppCoordinator.swift"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		1DB97C482BCFA6D60031A0F5 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				1D13FBCB2BD7AD2300D3DF3F /* Documentation.docc */,
 				1DB97C562BCFA7CA0031A0F5 /* Logger.swift */,
 				1DB97C462BCFA6D20031A0F5 /* AppCoordinator.swift */,
 				1DB97C492BCFA6FA0031A0F5 /* DestinationFlowPage.swift */,
@@ -271,6 +274,7 @@
 				1DB97C5A2BCFA8B20031A0F5 /* Auth+Router.swift in Sources */,
 				1D13FBC62BD795FD00D3DF3F /* SettingsTnCView.swift in Sources */,
 				1D13FBBE2BD7951F00D3DF3F /* AddToCartView.swift in Sources */,
+				1D13FBCC2BD7AD2400D3DF3F /* Documentation.docc in Sources */,
 				1DB97C532BCFA7900031A0F5 /* ConnectReportPage.swift in Sources */,
 				1D13FBC42BD7956700D3DF3F /* ProfileDetailView.swift in Sources */,
 				1DB97C512BCFA7830031A0F5 /* HomePageView.swift in Sources */,
