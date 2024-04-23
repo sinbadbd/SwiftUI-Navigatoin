@@ -1,10 +1,6 @@
 ## Overview
 This document outlines the architecture and usage of navigation and deep linking within a SwiftUI application. It covers how navigation is handled programmatically through a coordinator pattern, and how deep links are mapped to app-specific routes using a URL scheme.
-1. **popLast** : Removes the last page from the navigation stack.
-2. **replaceLastWith**: Replaces the last page in the navigation stack with a new page.
-3. **popTo**: Pops the navigation stack up to and including the specified page.
-4. **popToPrevious**: Removes the last page from the navigation stack and executes a completion handler.
-5. **navigateAsRoot**: Resets the entire stack to a new root page.
+
 ### Components
 ### DestinationFlowPage: 
 An enumeration that defines all possible navigation destinations within the app. Each case may include associated values to pass specific data.
@@ -23,6 +19,12 @@ An enumeration that maps URL components to app-specific navigation routes.
 
 Responsible for maintaining a navigation path and optionally managing modal presentations.
 Provides methods like navigateTo, replaceLastWith, popTo, and presentSheet to control navigation flow programmatically.
+
+1. **popLast** : Removes the last page from the navigation stack.
+2. **replaceLastWith**: Replaces the last page in the navigation stack with a new page.
+3. **popTo**: Pops the navigation stack up to and including the specified page.
+4. **popToPrevious**: Removes the last page from the navigation stack and executes a completion handler.
+5. **navigateAsRoot**: Resets the entire stack to a new root page.
 
 ``` swift 
 import SwiftUI
