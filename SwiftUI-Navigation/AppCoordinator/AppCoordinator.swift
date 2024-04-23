@@ -25,12 +25,26 @@ class AppCoordinator: ObservableObject {
     /// Navigate to a specified page and add it to the navigation stack, ensuring no duplicates.
     /// - Parameter page: The destination page to navigate to.
     
-    private func printStack(_ message: String = "") {
+    private func printStack(_ message: String = "", oldStack: [DestinationFlowPage]? = nil) {
         if !message.isEmpty {
-            Logger.shared.log(message)
+            Logger.shared.log(message, level: .info)
         }
-        let stackDescription = stack.map { "\($0)" }.joined(separator: " -> ")
-        Logger.shared.log("Current Stack: \(stackDescription)", level: .debug)
+        
+        // Print old stack if provided
+        if let oldStack = oldStack {
+            let oldStackDescription = oldStack.enumerated().map { index, page -> String in
+                return String(repeating: "  ", count: index) + "-> \(page)"
+            }.joined(separator: "\n")
+            Logger.shared.log("Old Stack:\n\(oldStackDescription)", level: .debug)
+        }
+        
+        // Print current stack
+        let newStackDescription = stack.enumerated().map { index, page -> String in
+            return String(repeating: "  ", count: index) + "-> \(page)"
+        }.joined(separator: "\n")
+        Logger.shared.log("New Stack:\n\(newStackDescription)", level: .debug)
+        
+        // Logging sheet page if present
         if let sheet = sheetPage {
             Logger.shared.log("Current Sheet Presented: \(sheet)", level: .debug)
         } else {
@@ -41,12 +55,12 @@ class AppCoordinator: ObservableObject {
     /// Navigate to a specified page and add it to the navigation stack, ensuring no duplicates.
     /// - Parameter page: The destination page to navigate to.
     func navigateTo(_ page: DestinationFlowPage) {
+        let oldStack = stack
         Logger.shared.log("Request to navigate to \(page)", level: .info)
-        printStack("Before Navigation")
         removeAllInstancesOf(page)
         stack.append(page)
         updateNavigationPath()
-        printStack("After Navigation")
+        printStack("After Navigation", oldStack: oldStack)
     }
     /// Removes all instances of a specified page from the navigation stack.
     /// - Parameter page: The page to remove from the stack.
@@ -59,6 +73,7 @@ class AppCoordinator: ObservableObject {
     /// Replaces the last page in the navigation stack with the specified new page.
     /// - Parameter page: The new page that will replace the last page in the stack.
     func replaceLastWith(_ page: DestinationFlowPage) {
+        let oldStack = stack
         Logger.shared.log("Request to replace last with \(page)", level: .info)
         printStack("Before Replacement")
         if !stack.isEmpty {
@@ -66,30 +81,30 @@ class AppCoordinator: ObservableObject {
         }
         stack.append(page)
         updateNavigationPath()
-        printStack("After Replacement")
+        printStack("After Replacement", oldStack: oldStack)
     }
     
     /// Removes the last page from the navigation stack.
     func popLast() {
+        let oldStack = stack
         Logger.shared.log("Request to pop last item", level: .info)
-        printStack("Before Pop")
         if !stack.isEmpty {
             stack.removeLast()
             updateNavigationPath()
         }
-        printStack("After Pop")
+        printStack("After Pop", oldStack: oldStack)
     }
     
     /// Pops the stack until a specified page is reached, leaving it as the top of the stack.
     /// - Parameter page: The page to pop to.
     func popTo(_ page: DestinationFlowPage) {
+        let oldStack = stack
         Logger.shared.log("Request to pop to \(page)", level: .info)
-        printStack("Before Pop To")
         if let index = stack.firstIndex(where: { $0 == page }) {
             stack = Array(stack.prefix(upTo: index + 1))
             updateNavigationPath()
         }
-        printStack("After Pop To")
+        printStack("After Pop To", oldStack: oldStack)
     }
     
     /// Pops to the previous item in the navigation stack and calls a completion handler once done.

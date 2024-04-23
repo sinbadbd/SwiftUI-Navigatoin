@@ -27,5 +27,7 @@ class Logger {
         dateFormatter.dateFormat = "HH:mm:ss.SSS"
         print("[\(dateFormatter.string(from: Date()))] [\(level.rawValue)] \(message)")
     }
+  
+
 }
 
