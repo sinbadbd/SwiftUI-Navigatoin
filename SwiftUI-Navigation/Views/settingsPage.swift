@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct settingsPage: View {
-    
+    let edges = UIWindow.keyWindow?.safeAreaInsets
+
     @EnvironmentObject private var coordinator: AppCoordinator
-    
     var body: some View {
         VStack{
-            Text("Settings Page")
+            CustomBackView(coordinator: _coordinator)
             
-            Button("back to home page") {
-                coordinator.goToHomePage()
-            }
-            Button("deeplink to home page") {
-                coordinator.handleInAppDeepLink(route: .auth)
+            Text("Setting Page")
+            
+            Button("Go to profile page") {
+                coordinator.gotoProfilePage()
             }
         }
+        .padding(.top, edges?.top)
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
+            
 }
 
 #Preview {

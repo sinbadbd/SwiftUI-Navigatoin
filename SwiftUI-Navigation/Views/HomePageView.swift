@@ -9,17 +9,25 @@ import SwiftUI
 
 struct HomePageView: View {
     
+    let edges = UIWindow.keyWindow?.safeAreaInsets
     @EnvironmentObject private var coordinator: AppCoordinator
 
     var body: some View {
     
         VStack{
-            Text("Home Page")
-            
-            Button("Go to Connection page") {
-                coordinator.gotoConnectionPage()
+            CustomBackView(coordinator: _coordinator)
+            ScrollView {
+                Text("Home Page")
+                
+                Button("Go to Connection page") {
+                    coordinator.gotoConnectionPage()
+                }
             }
         }
+        .padding(.top, edges?.top)
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 }
 

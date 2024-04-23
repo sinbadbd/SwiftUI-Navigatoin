@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+
+
+public extension UIWindow{
+    static var keyWindow: UIWindow? {
+        let allScenes = UIApplication.shared.connectedScenes
+        for scene in allScenes {
+            guard let windowScene = scene as? UIWindowScene else { continue }
+            for window in windowScene.windows where window.isKeyWindow {
+                return window
+            }
+        }
+        return nil
+    }
+}
+
 class NavigateViewFactory{
     
     @ViewBuilder static func viewForDestination(_ destination: DestinationFlowPage) -> some View {
@@ -18,12 +33,13 @@ class NavigateViewFactory{
         case .detailsPage(_): getDetailsPage()
         case .addToCart: goAddToCard()
         case .payment: goPaymentView()
-        case .settingsTnC: EmptyView()
-        case .settingsPnP: EmptyView()
-        case .profile: EmptyView()
+        case .settingsTnC: goSettingTncView()
+        case .settingsPnP: goSettingPnCView()
+        case .profile: goProfilePageView()
         case .profileDetail(user: let user): EmptyView()
         case .homeDetail: EmptyView()
         case .generalDetail(text: let text):   EmptyView()
+        case .about: AboutPageView()
         }
     }
     
@@ -39,16 +55,16 @@ class NavigateViewFactory{
     }
     
     static func getDetailsPage() -> some View{
-        let view = EmptyView()//DetailScreenView()
+        let view = DetailScreenView()//DetailScreenView()
         return view
     }
     static func goAddToCard() -> some View{
-        let view = EmptyView()//AddToCartView()
+        let view = AddToCartView()//AddToCartView()
         return view
     }
     
     static func goPaymentView() -> some View{
-        let view = EmptyView()//PaymentView()
+        let view = PaymentView()//PaymentView()
         return view
     }
     static func goConnectionViewView() -> some View{
@@ -59,4 +75,23 @@ class NavigateViewFactory{
         let view = settingsPage()
         return view
     }
+    
+    static func goProfilePageView() -> some View{
+        let view = ProfileView()
+        return view
+    }
+    
+    static func goSettingTncView() -> some View{
+        let view = SettingsTnCView()
+        return view
+    }
+    
+    static func goSettingPnCView() -> some View{
+        let view = SettingsPnCView()
+        return view
+    }
+    
+    
 }
+
+

@@ -31,8 +31,9 @@ struct CustomBackView: View {
         }
         //.padding(.top, edges?.top)
         .padding(.horizontal, 16)
+        .frame(height: 44)
         .frame(maxWidth: .infinity)
-        .background(Color.clear)
+        .background(Color.blue.opacity(0.5))
     }
 }
 

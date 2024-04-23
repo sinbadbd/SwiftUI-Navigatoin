@@ -1,27 +1,27 @@
 //
-//  AuthPage.swift
+//  AboutPageView.swift
 //  SwiftUI-Navigation
 //
-//  Created by Imran on 17/4/24.
+//  Created by Imran on 23/4/24.
 //
 
 import SwiftUI
 
-struct AuthPage: View {
-    let edges = UIWindow.keyWindow?.safeAreaInsets
+struct AboutPageView: View {
     @EnvironmentObject private var coordinator: AppCoordinator
     
     var body: some View {
+        
         VStack{
             CustomBackView(coordinator: _coordinator)
-
-            Text("Authentication Page")
-            
-            Button("Go to Home") {
-                coordinator.goToHomePage()
+            ScrollView {
+                Text("About Page")
+                
+                Button("Go to some page") {
+                    coordinator.gotoConnectionPage()
+                }
             }
         }
-        .padding(.top, edges?.top)
         .ignoresSafeArea()
         .navigationBarBackButtonHidden()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -29,5 +29,5 @@ struct AuthPage: View {
 }
 
 #Preview {
-    AuthPage()
+    AboutPageView()
 }

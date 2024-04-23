@@ -26,6 +26,7 @@ enum DestinationFlowPage: Hashable, Identifiable {
     case profileDetail(user: Any)
     case homeDetail
     case generalDetail(text: String)
+    case about
     
     var id: String {
         String(describing: self)
@@ -60,6 +61,8 @@ enum DestinationFlowPage: Hashable, Identifiable {
             hasher.combine("homeDetail")
         case .generalDetail(_):
             hasher.combine("generalDetail")
+        case .about:
+            hasher.combine("about")
         }
     }
     
