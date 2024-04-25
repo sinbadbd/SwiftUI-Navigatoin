@@ -24,13 +24,13 @@ extension AppCoordinator {
     private func processDeepLink(route: DeepLinkRoute) {
         switch route {
         case .auth:
-            navigateTo(.auth)
+            navigateTo(.auth(.login))
         case .home:
-            navigateTo(.home)
+            navigateTo(.platform(.platform))
         case .details(let itemID):
-            navigateTo(.detailsPage(itemID))
+            navigateTo(.detailsPage(.details))
         case .profile:
-            navigateTo(.profile)
+            navigateTo(.profile(.profile))
         }
     }
 }

@@ -1,25 +1,25 @@
 //
-//  PaymentView.swift
+//  AuthPage.swift
 //  SwiftUI-Navigation
 //
-//  Created by Imran on 23/4/24.
+//  Created by Imran on 17/4/24.
 //
 
 import SwiftUI
 
-struct PaymentView: View {
+struct AuthPageView: View {
     let edges = UIWindow.keyWindow?.safeAreaInsets
     @EnvironmentObject private var coordinator: AppCoordinator
+    
     var body: some View {
         VStack{
-            CustomBackView(coordinator: _coordinator,title: "Payment Page")
+            CustomBackView(coordinator: _coordinator)
+
+            Text("Authentication Page")
             
-            Text("Payment Page")
-            
-            Button("GO to") {
-                coordinator.gotoProfilePage()
+            Button("Go to Home") {
+                coordinator.goToHomePage()
             }
-            .buttonBorderShape(.capsule)
         }
         .padding(.top, edges?.top)
         .ignoresSafeArea()
@@ -29,5 +29,5 @@ struct PaymentView: View {
 }
 
 #Preview {
-    PaymentView()
+    AuthPageView()
 }

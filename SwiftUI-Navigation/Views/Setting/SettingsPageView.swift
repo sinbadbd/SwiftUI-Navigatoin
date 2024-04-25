@@ -1,5 +1,5 @@
 //
-//  settingsPage.swift
+//  SettingsPageView.swift
 //  SwiftUI-Navigation
 //
 //  Created by Imran on 17/4/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct settingsPage: View {
+struct SettingsPageView: View {
     let edges = UIWindow.keyWindow?.safeAreaInsets
 
     @EnvironmentObject private var coordinator: AppCoordinator
@@ -30,5 +30,5 @@ struct settingsPage: View {
 }
 
 #Preview {
-    settingsPage()
+    SettingsPageView()
 }

@@ -17,7 +17,7 @@ struct AboutPageView: View {
             Text("AboutPageView Page")
             
             Button("GO to ") {
-                coordinator.navigateAsRoot(.settingsPnP)
+                coordinator.navigateAsRoot(.settings(.setting))
             }
             .buttonBorderShape(.capsule)
         }

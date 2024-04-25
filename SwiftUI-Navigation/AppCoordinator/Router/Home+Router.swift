@@ -20,19 +20,19 @@ protocol HomeProtocol{
 
 extension AppCoordinator: HomeProtocol{
     func gotoPaymentPage() {
-        navigateTo(.payment)
+        navigateTo(.payment(.payment))
     }
     
     func gotoAddToPage() {
-        navigateTo(.addToCart)
+        navigateTo(.addToCart(.addToCart))
     }
     
     func gotoSettingPagePage() {
-        navigateTo(.settings)
+        navigateTo(.settings(.setting))
     }
     
     func gotoAboutPage() {
-        navigateTo(.about)
+        navigateTo(.about(.about))
     }
     
     func gotoMorePage() {
@@ -40,15 +40,15 @@ extension AppCoordinator: HomeProtocol{
     }
     
     func gotoDetailPage() {
-        navigateTo(.profileDetail(user: ""))
+        navigateTo(.detailsPage(.details))
     }
     
     func gotoProfilePage() {
-        navigateTo(.profile)
+        navigateTo(.profile(.profile))
     }
     
     func gotoConnectionPage() {
 //        presentSheet(.connectionStatus)
-        navigateTo(.connectionStatus)
+        navigateTo(.connectionStatus(.connection))
     }
 }

@@ -18,17 +18,17 @@ struct ProfileDetailView: View {
             Text("ProfileDetailView Page")
             
             Button("GO to: ReplaceLastWith Home") {
-                coordinator.replaceLastWith(.home)
+                coordinator.replaceLastWith(.platform(.platform))
             }
             .buttonBorderShape(.capsule)
             
             Button("GO to: popTo any view") {
-                coordinator.popTo(.profile)
+                coordinator.popTo(.profile(.profile))
             }
             .buttonBorderShape(.capsule)
             
             Button("GO to: NavigateAsRoot") {
-                coordinator.navigateAsRoot(.connectionStatus)
+                coordinator.navigateAsRoot(.connectionStatus(.connection))
             }
             .buttonBorderShape(.capsule)
         }

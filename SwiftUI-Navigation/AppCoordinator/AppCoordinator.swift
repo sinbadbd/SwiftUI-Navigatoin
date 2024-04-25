@@ -65,9 +65,11 @@ class AppCoordinator: ObservableObject {
     /// Removes all instances of a specified page from the navigation stack.
     /// - Parameter page: The page to remove from the stack.
     private func removeAllInstancesOf(_ page: DestinationFlowPage) {
-        let beforeRemoval = stack
+        guard let lastIndex = stack.lastIndex(of: page), lastIndex != stack.count - 1 else {
+            return
+        }
         stack.removeAll { $0 == page }
-        Logger.shared.log("Removed all instances of \(page) | Before: \(beforeRemoval) | After: \(stack)", level: .info)
+        Logger.shared.log("Removed all instances of \(page) | After: \(stack)", level: .info)
     }
     
     /// Replaces the last page in the navigation stack with the specified new page.

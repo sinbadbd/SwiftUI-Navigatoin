@@ -13,7 +13,7 @@ protocol OnBoardProtocol{
 
 extension AppCoordinator: OnBoardProtocol{
     func goToAuthPage() {
-        navigateTo(.auth)
+        navigateTo(.auth(.login))
     }
 }
 
@@ -24,6 +24,6 @@ protocol AuthProtocol{
 
 extension AppCoordinator: AuthProtocol{
     func goToHomePage() {
-        navigateTo(.home)
+        navigateTo(.platform(.platform))
     }
 }

@@ -26,13 +26,26 @@
 		1DB97C472BCFA6D20031A0F5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C462BCFA6D20031A0F5 /* AppCoordinator.swift */; };
 		1DB97C4A2BCFA6FA0031A0F5 /* DestinationFlowPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C492BCFA6FA0031A0F5 /* DestinationFlowPage.swift */; };
 		1DB97C4C2BCFA73E0031A0F5 /* NavigateViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C4B2BCFA73E0031A0F5 /* NavigateViewFactory.swift */; };
-		1DB97C4F2BCFA77B0031A0F5 /* AuthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C4E2BCFA77B0031A0F5 /* AuthPage.swift */; };
+		1DB97C4F2BCFA77B0031A0F5 /* AuthPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C4E2BCFA77B0031A0F5 /* AuthPageView.swift */; };
 		1DB97C512BCFA7830031A0F5 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C502BCFA7830031A0F5 /* HomePageView.swift */; };
 		1DB97C532BCFA7900031A0F5 /* ConnectReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C522BCFA7900031A0F5 /* ConnectReportPage.swift */; };
 		1DB97C572BCFA7CA0031A0F5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C562BCFA7CA0031A0F5 /* Logger.swift */; };
 		1DB97C5A2BCFA8B20031A0F5 /* Auth+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C592BCFA8B10031A0F5 /* Auth+Router.swift */; };
 		1DB97C5C2BCFA8C50031A0F5 /* Home+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C5B2BCFA8C50031A0F5 /* Home+Router.swift */; };
-		1DB97C5E2BCFAA870031A0F5 /* settingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C5D2BCFAA870031A0F5 /* settingsPage.swift */; };
+		1DB97C5E2BCFAA870031A0F5 /* SettingsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB97C5D2BCFAA870031A0F5 /* SettingsPageView.swift */; };
+		1DFB07BA2BD97471004640F8 /* Enum+DestinationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07B92BD97471004640F8 /* Enum+DestinationFlow.swift */; };
+		1DFB07BC2BD976D6004640F8 /* AuthViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07BB2BD976D6004640F8 /* AuthViewFactory.swift */; };
+		1DFB07C62BD9D190004640F8 /* OTPVerifyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07C52BD9D190004640F8 /* OTPVerifyPage.swift */; };
+		1DFB07C82BD9D19A004640F8 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07C72BD9D19A004640F8 /* PrivacyPolicyView.swift */; };
+		1DFB07CA2BD9D1AD004640F8 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07C92BD9D1AD004640F8 /* HelpView.swift */; };
+		1DFB07CC2BD9D1F5004640F8 /* PlatfromViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07CB2BD9D1F5004640F8 /* PlatfromViewFactory.swift */; };
+		1DFB07CE2BD9D28E004640F8 /* ConnectionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07CD2BD9D28E004640F8 /* ConnectionViewFactory.swift */; };
+		1DFB07D02BD9D2D2004640F8 /* SettingsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07CF2BD9D2D2004640F8 /* SettingsViewFactory.swift */; };
+		1DFB07D22BD9D367004640F8 /* DetailsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07D12BD9D367004640F8 /* DetailsViewFactory.swift */; };
+		1DFB07D42BD9D3E0004640F8 /* AddToCartViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07D32BD9D3E0004640F8 /* AddToCartViewFactory.swift */; };
+		1DFB07D62BD9D432004640F8 /* PaymentViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07D52BD9D432004640F8 /* PaymentViewFactory.swift */; };
+		1DFB07D82BD9D43D004640F8 /* ProfileViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07D72BD9D43D004640F8 /* ProfileViewFactory.swift */; };
+		1DFB07DA2BD9D448004640F8 /* AboutViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07D92BD9D448004640F8 /* AboutViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,13 +71,26 @@
 		1DB97C462BCFA6D20031A0F5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DB97C492BCFA6FA0031A0F5 /* DestinationFlowPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationFlowPage.swift; sourceTree = "<group>"; };
 		1DB97C4B2BCFA73E0031A0F5 /* NavigateViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateViewFactory.swift; sourceTree = "<group>"; };
-		1DB97C4E2BCFA77B0031A0F5 /* AuthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPage.swift; sourceTree = "<group>"; };
+		1DB97C4E2BCFA77B0031A0F5 /* AuthPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPageView.swift; sourceTree = "<group>"; };
 		1DB97C502BCFA7830031A0F5 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		1DB97C522BCFA7900031A0F5 /* ConnectReportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectReportPage.swift; sourceTree = "<group>"; };
 		1DB97C562BCFA7CA0031A0F5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1DB97C592BCFA8B10031A0F5 /* Auth+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Router.swift"; sourceTree = "<group>"; };
 		1DB97C5B2BCFA8C50031A0F5 /* Home+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Router.swift"; sourceTree = "<group>"; };
-		1DB97C5D2BCFAA870031A0F5 /* settingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsPage.swift; sourceTree = "<group>"; };
+		1DB97C5D2BCFAA870031A0F5 /* SettingsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageView.swift; sourceTree = "<group>"; };
+		1DFB07B92BD97471004640F8 /* Enum+DestinationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+DestinationFlow.swift"; sourceTree = "<group>"; };
+		1DFB07BB2BD976D6004640F8 /* AuthViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07C52BD9D190004640F8 /* OTPVerifyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyPage.swift; sourceTree = "<group>"; };
+		1DFB07C72BD9D19A004640F8 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		1DFB07C92BD9D1AD004640F8 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		1DFB07CB2BD9D1F5004640F8 /* PlatfromViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatfromViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07CD2BD9D28E004640F8 /* ConnectionViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07CF2BD9D2D2004640F8 /* SettingsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07D12BD9D367004640F8 /* DetailsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07D32BD9D3E0004640F8 /* AddToCartViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07D52BD9D432004640F8 /* PaymentViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07D72BD9D43D004640F8 /* ProfileViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07D92BD9D448004640F8 /* AboutViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +156,9 @@
 		1DB97C482BCFA6D60031A0F5 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				1DB97C462BCFA6D20031A0F5 /* AppCoordinator.swift */,
-				1DB97C492BCFA6FA0031A0F5 /* DestinationFlowPage.swift */,
-				1DB97C4B2BCFA73E0031A0F5 /* NavigateViewFactory.swift */,
 				1DB97C562BCFA7CA0031A0F5 /* Logger.swift */,
+				1DB97C462BCFA6D20031A0F5 /* AppCoordinator.swift */,
+				1DFB07B62BD9738E004640F8 /* DestinationFlowPage */,
 				1DB97C582BCFA8970031A0F5 /* Router */,
 				1D13FBBA2BD7835600D3DF3F /* DeepLink */,
 			);
@@ -143,18 +168,14 @@
 		1DB97C4D2BCFA7730031A0F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1DB97C4E2BCFA77B0031A0F5 /* AuthPage.swift */,
-				1DB97C502BCFA7830031A0F5 /* HomePageView.swift */,
-				1DB97C522BCFA7900031A0F5 /* ConnectReportPage.swift */,
-				1DB97C5D2BCFAA870031A0F5 /* settingsPage.swift */,
-				1D13FBBB2BD794F500D3DF3F /* ProfileView.swift */,
-				1D13FBBD2BD7951F00D3DF3F /* AddToCartView.swift */,
-				1D13FBBF2BD7952800D3DF3F /* DetailScreenView.swift */,
-				1D13FBC12BD7954700D3DF3F /* PaymentView.swift */,
-				1D13FBC32BD7956700D3DF3F /* ProfileDetailView.swift */,
-				1D13FBC52BD795FD00D3DF3F /* SettingsTnCView.swift */,
-				1D13FBC72BD7962500D3DF3F /* SettingsPnCView.swift */,
-				1D13FBC92BD7991000D3DF3F /* AboutPageView.swift */,
+				1DFB07BD2BD97723004640F8 /* Auth */,
+				1DFB07BE2BD9772E004640F8 /* Platfrom */,
+				1DFB07C02BD97753004640F8 /* Setting */,
+				1DFB07BF2BD9774B004640F8 /* Connection */,
+				1DFB07C12BD9775F004640F8 /* AddToCart */,
+				1DFB07C22BD97770004640F8 /* Payment */,
+				1DFB07C42BD977C0004640F8 /* About */,
+				1DFB07C32BD97795004640F8 /* Profile */,
 				1D580C982BD2DEB60051D9C7 /* CustomBackView.swift */,
 			);
 			path = Views;
@@ -183,6 +204,112 @@
 				1DB97C5B2BCFA8C50031A0F5 /* Home+Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		1DFB07B62BD9738E004640F8 /* DestinationFlowPage */ = {
+			isa = PBXGroup;
+			children = (
+				1DB97C492BCFA6FA0031A0F5 /* DestinationFlowPage.swift */,
+				1DFB07B92BD97471004640F8 /* Enum+DestinationFlow.swift */,
+				1DFB07B72BD973B6004640F8 /* NavigationViews */,
+			);
+			path = DestinationFlowPage;
+			sourceTree = "<group>";
+		};
+		1DFB07B72BD973B6004640F8 /* NavigationViews */ = {
+			isa = PBXGroup;
+			children = (
+				1DB97C4B2BCFA73E0031A0F5 /* NavigateViewFactory.swift */,
+				1DFB07B82BD973C3004640F8 /* ViewFactories */,
+			);
+			path = NavigationViews;
+			sourceTree = "<group>";
+		};
+		1DFB07B82BD973C3004640F8 /* ViewFactories */ = {
+			isa = PBXGroup;
+			children = (
+				1DFB07BB2BD976D6004640F8 /* AuthViewFactory.swift */,
+				1DFB07CB2BD9D1F5004640F8 /* PlatfromViewFactory.swift */,
+				1DFB07CD2BD9D28E004640F8 /* ConnectionViewFactory.swift */,
+				1DFB07CF2BD9D2D2004640F8 /* SettingsViewFactory.swift */,
+				1DFB07D12BD9D367004640F8 /* DetailsViewFactory.swift */,
+				1DFB07D32BD9D3E0004640F8 /* AddToCartViewFactory.swift */,
+				1DFB07D52BD9D432004640F8 /* PaymentViewFactory.swift */,
+				1DFB07D72BD9D43D004640F8 /* ProfileViewFactory.swift */,
+				1DFB07D92BD9D448004640F8 /* AboutViewFactory.swift */,
+			);
+			path = ViewFactories;
+			sourceTree = "<group>";
+		};
+		1DFB07BD2BD97723004640F8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1DB97C4E2BCFA77B0031A0F5 /* AuthPageView.swift */,
+				1DFB07C52BD9D190004640F8 /* OTPVerifyPage.swift */,
+				1DFB07C72BD9D19A004640F8 /* PrivacyPolicyView.swift */,
+				1DFB07C92BD9D1AD004640F8 /* HelpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		1DFB07BE2BD9772E004640F8 /* Platfrom */ = {
+			isa = PBXGroup;
+			children = (
+				1DB97C502BCFA7830031A0F5 /* HomePageView.swift */,
+			);
+			path = Platfrom;
+			sourceTree = "<group>";
+		};
+		1DFB07BF2BD9774B004640F8 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				1DB97C522BCFA7900031A0F5 /* ConnectReportPage.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		1DFB07C02BD97753004640F8 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1DB97C5D2BCFAA870031A0F5 /* SettingsPageView.swift */,
+				1D13FBC52BD795FD00D3DF3F /* SettingsTnCView.swift */,
+				1D13FBC72BD7962500D3DF3F /* SettingsPnCView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		1DFB07C12BD9775F004640F8 /* AddToCart */ = {
+			isa = PBXGroup;
+			children = (
+				1D13FBBD2BD7951F00D3DF3F /* AddToCartView.swift */,
+				1D13FBBF2BD7952800D3DF3F /* DetailScreenView.swift */,
+			);
+			path = AddToCart;
+			sourceTree = "<group>";
+		};
+		1DFB07C22BD97770004640F8 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				1D13FBC12BD7954700D3DF3F /* PaymentView.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		1DFB07C32BD97795004640F8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1D13FBC32BD7956700D3DF3F /* ProfileDetailView.swift */,
+				1D13FBBB2BD794F500D3DF3F /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1DFB07C42BD977C0004640F8 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				1D13FBC92BD7991000D3DF3F /* AboutPageView.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,26 +382,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DB97C4F2BCFA77B0031A0F5 /* AuthPage.swift in Sources */,
+				1DB97C4F2BCFA77B0031A0F5 /* AuthPageView.swift in Sources */,
+				1DFB07D62BD9D432004640F8 /* PaymentViewFactory.swift in Sources */,
 				1D13FBC82BD7962500D3DF3F /* SettingsPnCView.swift in Sources */,
+				1DFB07D82BD9D43D004640F8 /* ProfileViewFactory.swift in Sources */,
 				1D13FBCA2BD7991000D3DF3F /* AboutPageView.swift in Sources */,
+				1DFB07DA2BD9D448004640F8 /* AboutViewFactory.swift in Sources */,
 				1D13FBC02BD7952800D3DF3F /* DetailScreenView.swift in Sources */,
 				1DB97C472BCFA6D20031A0F5 /* AppCoordinator.swift in Sources */,
 				1DB97C3A2BCFA6A30031A0F5 /* ContentView.swift in Sources */,
 				1D6F3CAF2BD1569800BE6EE3 /* DeepLink+AppCoordinator.swift in Sources */,
-				1DB97C5E2BCFAA870031A0F5 /* settingsPage.swift in Sources */,
+				1DFB07CA2BD9D1AD004640F8 /* HelpView.swift in Sources */,
+				1DFB07D42BD9D3E0004640F8 /* AddToCartViewFactory.swift in Sources */,
+				1DB97C5E2BCFAA870031A0F5 /* SettingsPageView.swift in Sources */,
 				1D580C992BD2DEB60051D9C7 /* CustomBackView.swift in Sources */,
+				1DFB07BA2BD97471004640F8 /* Enum+DestinationFlow.swift in Sources */,
 				1D6F3CB12BD15CA700BE6EE3 /* DeepLinkRoute.swift in Sources */,
+				1DFB07CC2BD9D1F5004640F8 /* PlatfromViewFactory.swift in Sources */,
+				1DFB07C62BD9D190004640F8 /* OTPVerifyPage.swift in Sources */,
 				1DB97C4C2BCFA73E0031A0F5 /* NavigateViewFactory.swift in Sources */,
+				1DFB07CE2BD9D28E004640F8 /* ConnectionViewFactory.swift in Sources */,
 				1D13FBBC2BD794F500D3DF3F /* ProfileView.swift in Sources */,
 				1DB97C5C2BCFA8C50031A0F5 /* Home+Router.swift in Sources */,
+				1DFB07C82BD9D19A004640F8 /* PrivacyPolicyView.swift in Sources */,
 				1D13FBC22BD7954700D3DF3F /* PaymentView.swift in Sources */,
 				1DB97C572BCFA7CA0031A0F5 /* Logger.swift in Sources */,
 				1DB97C382BCFA6A30031A0F5 /* SwiftUI_NavigationApp.swift in Sources */,
 				1DB97C5A2BCFA8B20031A0F5 /* Auth+Router.swift in Sources */,
 				1D13FBC62BD795FD00D3DF3F /* SettingsTnCView.swift in Sources */,
+				1DFB07D02BD9D2D2004640F8 /* SettingsViewFactory.swift in Sources */,
+				1DFB07D22BD9D367004640F8 /* DetailsViewFactory.swift in Sources */,
 				1D13FBBE2BD7951F00D3DF3F /* AddToCartView.swift in Sources */,
 				1D13FBCC2BD7AD2400D3DF3F /* Documentation.docc in Sources */,
+				1DFB07BC2BD976D6004640F8 /* AuthViewFactory.swift in Sources */,
 				1DB97C532BCFA7900031A0F5 /* ConnectReportPage.swift in Sources */,
 				1D13FBC42BD7956700D3DF3F /* ProfileDetailView.swift in Sources */,
 				1DB97C512BCFA7830031A0F5 /* HomePageView.swift in Sources */,
