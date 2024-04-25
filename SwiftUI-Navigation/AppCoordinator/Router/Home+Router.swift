@@ -14,19 +14,19 @@ protocol HomeProtocol{
     func gotoMorePage()
     func gotoDetailPage()
     func gotoProfilePage()
-    func gotoAddToPage()
+
     func gotoPaymentPage()
+    
+ 
 }
 
 extension AppCoordinator: HomeProtocol{
+     
+    
     func gotoPaymentPage() {
         navigateTo(.payment(.payment))
     }
-    
-    func gotoAddToPage() {
-        navigateTo(.addToCart(.addToCart))
-    }
-    
+
     func gotoSettingPagePage() {
         navigateTo(.settings(.setting))
     }

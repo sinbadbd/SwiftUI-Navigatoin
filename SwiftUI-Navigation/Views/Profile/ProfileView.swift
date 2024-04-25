@@ -17,7 +17,7 @@ struct ProfileView: View {
             Text("Profile Page")
             
             Button("Go to profile page") {
-                coordinator.gotoAddToPage()
+                coordinator.gotoAddToCartPage()
             }
         }
         .padding(.top, edges?.top)

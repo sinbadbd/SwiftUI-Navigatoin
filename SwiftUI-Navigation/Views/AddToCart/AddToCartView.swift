@@ -19,6 +19,15 @@ struct AddToCartView: View {
             Button("Go to Detail page") {
                 coordinator.gotoDetailPage()
             }
+            Button("Go to Detail page") {
+                coordinator.gotCartToHomePage()
+            }
+            Button("Pop to") {
+                coordinator.gotCartToPop()
+            }
+            Button("Go to navigation as root") {
+                coordinator.goToNavigateAsRoot()
+            }
         }
         .padding(.top, edges?.top)
         .ignoresSafeArea()
@@ -30,3 +39,9 @@ struct AddToCartView: View {
 #Preview {
     AddToCartView()
 }
+/*
+ func gotoAddToCartPage()
+ func gotToHomePage()
+ func gotToPopto()
+ func goToNavigateAsRoot()
+ */

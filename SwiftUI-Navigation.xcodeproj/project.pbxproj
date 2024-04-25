@@ -46,6 +46,7 @@
 		1DFB07D62BD9D432004640F8 /* PaymentViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07D52BD9D432004640F8 /* PaymentViewFactory.swift */; };
 		1DFB07D82BD9D43D004640F8 /* ProfileViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07D72BD9D43D004640F8 /* ProfileViewFactory.swift */; };
 		1DFB07DA2BD9D448004640F8 /* AboutViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07D92BD9D448004640F8 /* AboutViewFactory.swift */; };
+		1DFB07DC2BD9FDDA004640F8 /* AddToCart+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB07DB2BD9FDDA004640F8 /* AddToCart+Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		1DFB07D52BD9D432004640F8 /* PaymentViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewFactory.swift; sourceTree = "<group>"; };
 		1DFB07D72BD9D43D004640F8 /* ProfileViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewFactory.swift; sourceTree = "<group>"; };
 		1DFB07D92BD9D448004640F8 /* AboutViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewFactory.swift; sourceTree = "<group>"; };
+		1DFB07DB2BD9FDDA004640F8 /* AddToCart+Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddToCart+Route.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			children = (
 				1DB97C592BCFA8B10031A0F5 /* Auth+Router.swift */,
 				1DB97C5B2BCFA8C50031A0F5 /* Home+Router.swift */,
+				1DFB07DB2BD9FDDA004640F8 /* AddToCart+Route.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				1DFB07CE2BD9D28E004640F8 /* ConnectionViewFactory.swift in Sources */,
 				1D13FBBC2BD794F500D3DF3F /* ProfileView.swift in Sources */,
 				1DB97C5C2BCFA8C50031A0F5 /* Home+Router.swift in Sources */,
+				1DFB07DC2BD9FDDA004640F8 /* AddToCart+Route.swift in Sources */,
 				1DFB07C82BD9D19A004640F8 /* PrivacyPolicyView.swift in Sources */,
 				1D13FBC22BD7954700D3DF3F /* PaymentView.swift in Sources */,
 				1DB97C572BCFA7CA0031A0F5 /* Logger.swift in Sources */,
